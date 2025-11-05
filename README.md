@@ -1,17 +1,20 @@
-# React + Vite
+# 커밋 컨벤션
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+| 유형 | 상세 |
+| --- | --- |
+| feat | 새로운 기능 추가 |
+| fix | 버그 수정 |
+| refactor | 코드 리팩토링 (기능 변경 없이 구조 개선) |
+| test | 테스트 코드 작성 |
+| chore | 기타 자잘한 작업 (빌드 설정, 패키지 관리 등) |
+| docs | 문서 추가 또는 수정 |
+| delete | 불필요한 코드나 파일 삭제 |
+| build | 빌드 관련 파일 및 설정 변경 |
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 커밋 메시지 형식
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# FE
+- 형식: `유형: 변경 사항 요약`
+- 제목은 30자 이내, 본문은 자유롭게
+- 예시 : `feat: 페이지 추가`
