@@ -67,3 +67,15 @@ html, body {
   font-family: 'Paperozi', sans-serif;
   font-weight: 100;
 }
+
+.button-container {
+  background: rgba(238, 238, 238, 0.5); /* 불투명한 흰색 */
+  backdrop-filter: blur(8px); /* 유리 느낌 */
+  border-radius: 40px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  width: fit-content;
+  margin: 80px auto;
+}

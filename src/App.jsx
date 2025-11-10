@@ -10,7 +10,7 @@ function App() {
   };
   return (
     <>
-      <Button {...a}/>
+      <div className='button-container'><Button {...a}/><Button {...a}/></div>
     </>
   )
 }
