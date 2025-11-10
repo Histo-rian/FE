@@ -26,3 +26,11 @@ button:active {
  background-color: whtie;
  color: #2C3E50;
 }
+
+.active{
+ filter: brightness(80%);
+}
+
+.active:hover {
+  filter: brightness(80%) !important;
+}

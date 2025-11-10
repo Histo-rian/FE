@@ -3,9 +3,10 @@ import Button from '../src/components/Button/Button'
 
 function App() {
   const a = {
-    color : "black",
+    color : "white",
     text : "TEST",
-    state : "btnPrimary"
+    type : "btnPrimary",
+    state : "active"
   };
   return (
     <>

@@ -1,8 +1,8 @@
 import '../Button/Button.css'
 
-function Button({color,state,text}){
+function Button({color,type,state,text}){
  return(
-  <button className={`${state} ` + `${color}`} >
+  <button className={`${type} ` + `${color}` + ` ${state}`} >
    {text}
   </button>
  )
