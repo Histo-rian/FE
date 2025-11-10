@@ -68,7 +68,7 @@ html, body {
   font-weight: 100;
 }
 
-.button-container {
+.buttonContainer {
   background: rgba(238, 238, 238, 0.5); /* 불투명한 흰색 */
   backdrop-filter: blur(8px); /* 유리 느낌 */
   border-radius: 40px;
