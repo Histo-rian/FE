@@ -1,0 +1,81 @@
+html {
+  background-color: #fdfbf6;
+  overflow: hidden;
+}
+.mainContainer {
+  background-color: #ff8469;
+  width: 95%;
+  height: 80%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+#one {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginContainer {
+  position: fixed;
+  left: 89%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  background: rgba(238, 238, 238, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 40px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: fit-content;
+}
+
+.logoContainer {
+  position: fixed;
+  right: 89%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #111b2b;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Paperlogy;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 24.96px;
+  letter-spacing: -0.192px;
+  margin-bottom: 8px;
+}
+
+.text {
+  color: #31353c;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Paperlogy;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.192px;
+  white-space: pre-line;
+}
