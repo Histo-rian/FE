@@ -9,6 +9,17 @@ html {
   border-radius: 50px;
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+}
+
+.cardBox {
+  width: 95%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 250px;
 }
 section {
   width: 100vw;
@@ -20,6 +31,12 @@ section {
   display: flex;
   justify-content: center;
 }
+
+#two {
+  display: flex;
+  justify-content: center;
+}
+
 
 .box {
   display: flex;
@@ -78,4 +95,14 @@ section {
   font-weight: 500;
   letter-spacing: -0.192px;
   white-space: pre-line;
+}
+.fadeContainer {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none; /* 안보일 때 클릭 방지 */
+}
+
+.fadeContainer.visible {
+  opacity: 1;
+  pointer-events: auto;
 }

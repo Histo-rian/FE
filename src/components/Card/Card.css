@@ -1,6 +1,8 @@
 .cardContainer {
   display: flex;
-  width: 400px;
+  width: fit-content;
+  min-width: 420px;
+  min-height: 600px;
   height: 600px;
   padding: 63px 38px 63px 38px;
   flex-direction: column;
