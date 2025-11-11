@@ -12,7 +12,7 @@
   box-shadow: 0 3.6px 3.6px 0 rgba(0, 0, 0, 0.25);
 }
 
-.title{
+.cardTitle{
  display: flex;
  height: 40px;
  flex-direction: column;
@@ -28,7 +28,7 @@
  line-height: 25px;
 }
 
-.text{
+.cardText{
  display: flex;
  height: 280px;
  flex-direction: column;
