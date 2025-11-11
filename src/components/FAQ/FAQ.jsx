@@ -16,8 +16,8 @@ export default function FAQ({ title, text }) {
  }, [isOpen]);
 
  return (
-  <div className='faqContainer'>
-   <div onClick={() => setIsOpen(!isOpen)} className='faqTitle'>{title}</div>
+  <div onClick={() => setIsOpen(!isOpen)} className='faqContainer'>
+   <div className='faqTitle'>{title}</div>
    <div ref={contentRef} className='faqText'style={{ maxHeight: `${height}px` }}>{text}</div>
   </div>
  );

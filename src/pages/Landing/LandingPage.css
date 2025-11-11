@@ -37,6 +37,25 @@ section {
   justify-content: center;
 }
 
+#three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 80px;
+}
+#three .text {
+  margin-top: 50px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 45px;
+  margin-bottom: 200px;
+}
+
+#four {
+  padding: 80px;
+}
 
 .box {
   display: flex;
@@ -99,10 +118,27 @@ section {
 .fadeContainer {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
-  pointer-events: none; /* 안보일 때 클릭 방지 */
+  pointer-events: none;
 }
 
 .fadeContainer.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+.faqBox {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+}
+.fqa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 100px;
 }
