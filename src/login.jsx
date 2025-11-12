@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 
-function Signout() {
+function Login() {
   return (
     <div>
         <div className="login-container">
@@ -33,4 +33,4 @@ function Signout() {
   );
 }
 
-export default Signout;
+export default Login;
