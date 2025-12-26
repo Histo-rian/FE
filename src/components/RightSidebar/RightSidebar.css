@@ -1,0 +1,49 @@
+.right-sidebar-container {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-top: 0;
+    color: #333;
+}
+
+.recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.recent-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.recent-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.recent-post-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.recent-meta {
+    font-size: 12px;
+    color: #888;
+}
+
+.more-icon {
+    color: #aaa;
+    cursor: pointer;
+}

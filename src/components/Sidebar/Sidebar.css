@@ -1,0 +1,45 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #333;
+}
+
+.sidebar-item:hover {
+    background-color: #E8E8E8;
+}
+
+.sidebar-item.active {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+}
+
+.sidebar-icon {
+    font-size: 24px;
+}
+
+.sidebar-item span {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Paperozi', sans-serif;
+}
+
+.sidebar-item.active span {
+    font-weight: 700;
+}
+
+.sidebar-item.logout {
+    /* margin-top: 20px; removed for uniform spacing */
+    color: #333;
+}
