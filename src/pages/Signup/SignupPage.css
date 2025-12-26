@@ -1,0 +1,162 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FAFAFA;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.signup-content-wrapper {
+  display: flex;
+  width: 85%;
+  height: 90%;
+  background-color: white;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+}
+
+.signup-form-section {
+  flex: 1;
+  padding: 10% 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.signup-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5%;
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 1%;
+  font-weight: 400;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 4%;
+  background-color: #FFF5F2;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  font-family: 'Paperozi', sans-serif;
+  box-sizing: border-box;
+  /* Ensure padding doesn't overflow width */
+}
+
+.form-group input.error {
+  border: 1px solid #ff4d4f;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.login-link {
+  text-align: right;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 5%;
+  margin-top: -1%;
+}
+
+.login-link a {
+  color: #FF8469;
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 4%;
+  background-color: #FF8469;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.signup-button:hover {
+  background-color: #E6735A;
+}
+
+.signup-brand-section {
+  flex: 2;
+  background-color: #FF8469;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Animation for the brand content */
+@keyframes floatUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.brand-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: floatUp 1s ease-out forwards;
+}
+
+.brand-logo {
+  width: 40%;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.brand-text {
+  font-size: 72px;
+  font-weight: 800;
+  color: #2D3A4B;
+  margin: 0;
+  font-family: 'Paperozi', sans-serif;
+  letter-spacing: -1px;
+}
