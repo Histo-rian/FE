@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import logo from '../../assets/4.svg';
 
 export default function LoginPage() {
+
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         id: '',
         password: ''
@@ -16,7 +20,7 @@ export default function LoginPage() {
     const handleSubmit = () => {
         // Implement login logic here
         console.log('Login attempt:', formData);
-        alert('로그인 시도 (임시)');
+        navigate('/home');
     };
 
     return (
