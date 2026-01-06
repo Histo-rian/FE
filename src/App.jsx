@@ -5,7 +5,6 @@ import LandingPage from './pages/Landing/LandingPage'
 import SignupPage from './pages/Signup/SignupPage'
 import LoginPage from './pages/Login/LoginPage'
 import HomePage from './pages/Home/HomePage'
-import FriendsPage from './pages/Friends/FriendsPage'
 import MyPostsPage from './pages/MyPosts/MyPostsPage'
 import WritePage from './pages/Write/WritePage'
 
@@ -17,7 +16,6 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/friends" element={<FriendsPage />} />
         <Route path="/myposts" element={<MyPostsPage />} />
         <Route path="/write" element={<WritePage />} />
       </Routes>

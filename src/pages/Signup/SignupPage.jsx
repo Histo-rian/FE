@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignupPage.css';
 import logo from '../../assets/4.svg';
+import { authApi } from '../../api/auth';
 
 export default function SignupPage() {
     const navigate = useNavigate();
@@ -57,12 +58,18 @@ export default function SignupPage() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (validate()) {
-            console.log('Form Submitted', formData);
-            alert('회원가입이 완료되었습니다!');
-            navigate('/login');
-            // Proceed with API call
+            try {
+                await authApi.signup(formData);
+                console.log('Signup successful', formData);
+                alert('회원가입이 완료되었습니다!');
+                navigate('/login');
+            } catch (error) {
+                console.error('Signup failed:', error);
+                const errorMessage = error.response?.data?.detail || '회원가입에 실패했습니다. 다시 시도해주세요.';
+                alert(errorMessage);
+            }
         }
     };
 
