@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { GoHome } from 'react-icons/go';
-import { FaUserFriends } from 'react-icons/fa';
-import { HiOutlineDocumentText } from 'react-icons/hi';
-import { FaPen } from 'react-icons/fa6';
-import { FiLogOut } from 'react-icons/fi';
+import {
+    HiOutlineHome,
+    HiOutlineDocumentText,
+    HiOutlinePencilSquare,
+    HiOutlineArrowRightOnRectangle
+} from 'react-icons/hi2';
 import './Sidebar.css';
 
 export default function Sidebar() {
@@ -20,13 +21,8 @@ export default function Sidebar() {
     return (
         <nav className="sidebar-container">
             <div className={`sidebar-item ${isActive('/home')}`} onClick={() => handleNavigation('/home')}>
-                <GoHome className="sidebar-icon" />
+                <HiOutlineHome className="sidebar-icon" />
                 <span>Home</span>
-            </div>
-
-            <div className={`sidebar-item ${isActive('/friends')}`} onClick={() => handleNavigation('/friends')}>
-                <FaUserFriends className="sidebar-icon" />
-                <span>Friends</span>
             </div>
 
             <div className={`sidebar-item ${isActive('/myposts')}`} onClick={() => handleNavigation('/myposts')}>
@@ -35,12 +31,12 @@ export default function Sidebar() {
             </div>
 
             <div className={`sidebar-item ${isActive('/write')}`} onClick={() => handleNavigation('/write')}>
-                <FaPen className="sidebar-icon" />
+                <HiOutlinePencilSquare className="sidebar-icon" />
                 <span>Write</span>
             </div>
 
             <div className="sidebar-item logout" onClick={() => handleNavigation('/')}>
-                <FiLogOut className="sidebar-icon" />
+                <HiOutlineArrowRightOnRectangle className="sidebar-icon" />
                 <span>Logout</span>
             </div>
         </nav>

@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './WritePage.css';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import { postsApi } from '../../api/posts';
 
 const WritePage = () => {
+  const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [fontSize, setFontSize] = useState('3'); // execCommand fontSize: 1-7
@@ -136,14 +139,24 @@ const WritePage = () => {
     updateActiveStyles();
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const currentContent = editorRef.current ? editorRef.current.innerHTML : content;
     if (!title.trim() || !currentContent.trim() || currentContent === '<br>') {
       alert('제목과 내용을 모두 입력해주세요.');
       return;
     }
-    alert('게시글이 성공적으로 등록되었습니다!');
-    console.log({ title, content: currentContent });
+    try {
+      await postsApi.createPost({
+        title,
+        contents: currentContent,
+        author_id: 1 // 실제 유저 시스템 연동 전까지 임시 ID 사용
+      });
+      alert('게시글이 성공적으로 등록되었습니다!');
+      navigate('/home');
+    } catch (error) {
+      console.error('Failed to create post:', error);
+      alert('게시글 등록에 실패했습니다.');
+    }
   };
 
   const handleSaveDraft = () => {
