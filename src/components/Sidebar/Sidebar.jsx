@@ -34,7 +34,7 @@ export default function Sidebar() {
                 <span>My Posts</span>
             </div>
 
-            <div className="sidebar-item">
+            <div className={`sidebar-item ${isActive('/write')}`} onClick={() => handleNavigation('/write')}>
                 <FaPen className="sidebar-icon" />
                 <span>Write</span>
             </div>
