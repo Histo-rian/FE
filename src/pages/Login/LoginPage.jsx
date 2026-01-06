@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import logo from '../../assets/4.svg';
+import { authApi } from '../../api/auth';
 
 export default function LoginPage() {
 
@@ -17,10 +18,15 @@ export default function LoginPage() {
         setFormData(prev => ({ ...prev, [id]: value }));
     };
 
-    const handleSubmit = () => {
-        // Implement login logic here
-        console.log('Login attempt:', formData);
-        navigate('/home');
+    const handleSubmit = async () => {
+        try {
+            await authApi.login(formData);
+            console.log('Login successful');
+            navigate('/home');
+        } catch (error) {
+            console.error('Login failed:', error);
+            alert('로그인에 실패했습니다. 아이디 또는 비밀번호를 확인해주세요.');
+        }
     };
 
     return (
