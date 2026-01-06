@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { setupMockAdapter } from './mockAdapter';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL?.trim();
 
@@ -8,6 +9,11 @@ const axiosInstance = axios.create({
         'Content-Type': 'application/json',
     },
 });
+
+// Enable Mocking if VITE_USE_MOCK is true
+if (import.meta.env.VITE_USE_MOCK === 'true') {
+    setupMockAdapter(axiosInstance);
+}
 
 // Request Interceptor: Add JWT token to headers
 axiosInstance.interceptors.request.use(

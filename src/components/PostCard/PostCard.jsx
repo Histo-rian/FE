@@ -17,11 +17,6 @@ export default function PostCard({ author, tags, isVerified, content, descriptio
                     <FaUserCircle className='post-avatar' />
                     <div className='post-author-text'>
                         <span className='post-author-name'>{author}</span>
-                        <div className='post-tags'>
-                            {tags && tags.map((tag, idx) => (
-                                <span key={idx} className='post-tag'>{tag}</span>
-                            ))}
-                        </div>
                     </div>
                 </div>
 
@@ -33,7 +28,12 @@ export default function PostCard({ author, tags, isVerified, content, descriptio
 
             <div className='post-content'>
                 <h2 className='post-title'>{content}</h2>
-                {description && <p className='post-description'>{description}</p>}
+                {description && (
+                    <div
+                        className='post-description'
+                        dangerouslySetInnerHTML={{ __html: description }}
+                    />
+                )}
                 {image && (
                     <div className='post-image-container'>
                         <img src={image} alt="Post content" className='post-image' />

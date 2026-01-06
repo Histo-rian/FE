@@ -41,7 +41,6 @@ export default function HomePage() {
                             <PostCard
                                 key={post.post_id}
                                 author={`User ${post.author_id}`}
-                                tags={["#역사", "#HDF"]} // 기본 태그
                                 isVerified={true}
                                 content={post.title}
                                 description={post.contents}
