@@ -167,7 +167,7 @@ const WritePage = () => {
   };
 
   return (
-    <div className={`home-container write-page-container ${isModifierHeld ? 'modifier-pressed' : ''}`}>
+    <div className={`home-container ${isModifierHeld ? 'modifier-pressed' : ''}`}>
       <Header />
       <div className="home-content">
         <aside className="left-sidebar">
@@ -248,6 +248,8 @@ const WritePage = () => {
             </div>
           </div>
         </main>
+
+        <aside className="right-sidebar" />
       </div>
     </div>
   );

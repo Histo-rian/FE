@@ -1,11 +1,4 @@
-.write-page-container {
-  height: 100vh;
-  background-color: #f9fafb;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  font-family: "Paperozi", sans-serif;
-}
+
 
 
 .page-title {
@@ -68,11 +61,7 @@
   width: 100%;
   max-width: 1000px;
   flex: 1;
-  overflow-y: auto;
-  padding: 40px 20px 100px;
-  /* 상단 여백 확보 */
-  max-height: calc(100vh - 80px);
-  /* 헤더 영역 제외한 전체 높이 활용 */
+
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
