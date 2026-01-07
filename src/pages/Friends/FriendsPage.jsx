@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import RightSidebar from '../../components/RightSidebar/RightSidebar';
 import { FaUserCircle } from 'react-icons/fa';
 import './FriendsPage.css';
 
@@ -38,10 +37,6 @@ export default function FriendsPage() {
                         ))}
                     </div>
                 </main>
-
-                <aside className="right-sidebar">
-                    <RightSidebar />
-                </aside>
             </div>
         </div>
     );

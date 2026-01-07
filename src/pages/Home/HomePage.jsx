@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import RightSidebar from '../../components/RightSidebar/RightSidebar';
 import PostCard from '../../components/PostCard/PostCard';
 import './HomePage.css';
 import { postsApi } from '../../api/posts';
@@ -50,10 +49,6 @@ export default function HomePage() {
                         <p style={{ color: 'white', textAlign: 'center', marginTop: '20px' }}>게시글이 없습니다.</p>
                     )}
                 </main>
-
-                <aside className="right-sidebar">
-                    <RightSidebar />
-                </aside>
             </div>
         </div>
     );

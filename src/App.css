@@ -105,21 +105,7 @@ body {
   gap: 24px;
 }
 
-.right-sidebar {
-  width: 320px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 100px;
-  height: fit-content;
-}
-
 /* Responsiveness */
-@media (max-width: 1200px) {
-  .right-sidebar {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   .left-sidebar {
     display: none;

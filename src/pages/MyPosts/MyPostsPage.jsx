@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import RightSidebar from '../../components/RightSidebar/RightSidebar';
 import PostCard from '../../components/PostCard/PostCard';
 import './MyPostsPage.css';
 
@@ -42,10 +41,6 @@ export default function MyPostsPage() {
                         description="조선은 한국사에서 가장 체계적이고 발전된 국가였다. 첫째, 조선은..."
                     />
                 </main>
-
-                <aside className="right-sidebar">
-                    <RightSidebar />
-                </aside>
             </div>
         </div>
     );
