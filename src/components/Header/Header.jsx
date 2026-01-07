@@ -23,8 +23,7 @@ export default function Header() {
                 <div className="header-right">
                     <FaUserCircle className="user-icon" />
                     <div className="user-info">
-                        <span className="user-name">John Doe</span>
-                        <span className="user-followers">1.2K followers</span>
+                        <span className="user-name">{localStorage.getItem('user_id') || 'Guest'}</span>
                     </div>
                 </div>
             </div>

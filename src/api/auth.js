@@ -20,11 +20,15 @@ export const authApi = {
         if (response.data.access_token) {
             localStorage.setItem('access_token', response.data.access_token);
         }
+        if (response.data.user_id) {
+            localStorage.setItem('user_id', response.data.user_id);
+        }
         return response.data;
     },
 
     // 로그아웃 (클라이언트 측)
     logout: () => {
         localStorage.removeItem('access_token');
+        localStorage.removeItem('user_id');
     }
 };
