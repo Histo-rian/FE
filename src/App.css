@@ -74,9 +74,10 @@ body {
 
 /* Base Layout Components */
 .home-container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .home-content {
@@ -88,6 +89,8 @@ body {
   gap: 30px;
   box-sizing: border-box;
   flex: 1;
+  height: calc(100vh - 80px);
+  overflow: hidden;
 }
 
 .left-sidebar {
@@ -103,6 +106,28 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 10px;
+  /* 스크롤바 공간 확보 */
+}
+
+/* 피드 스크롤바 디자인 (선택 사항) */
+.feed-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.feed-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.feed-section::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 10px;
+}
+
+.feed-section::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
 }
 
 /* Responsiveness */

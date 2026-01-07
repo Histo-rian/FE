@@ -159,12 +159,7 @@ const WritePage = () => {
     }
   };
 
-  const handleSaveDraft = () => {
-    const currentContent = editorRef.current ? editorRef.current.innerHTML : content;
-    const draft = { title, content: currentContent, timestamp: new Date().toISOString() };
-    localStorage.setItem('hdf_write_draft', JSON.stringify(draft));
-    alert('임시저장이 완료되었습니다.');
-  };
+
 
   return (
     <div className={`home-container ${isModifierHeld ? 'modifier-pressed' : ''}`}>
@@ -178,7 +173,6 @@ const WritePage = () => {
           <div className="write-card-header">
             <h1 className="page-title">글 작성하기</h1>
             <div className="action-buttons">
-              <button className="draft-btn" onClick={handleSaveDraft}>임시저장</button>
               <button className="submit-btn" onClick={handleSubmit}>등록하기</button>
             </div>
           </div>

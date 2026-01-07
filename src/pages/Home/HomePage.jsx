@@ -8,6 +8,7 @@ import { postsApi } from '../../api/posts';
 export default function HomePage() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -24,9 +25,13 @@ export default function HomePage() {
         fetchPosts();
     }, []);
 
+    const filteredPosts = posts.filter(post =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <div className="home-container">
-            <Header />
+            <Header searchTerm={searchTerm} onSearchChange={setSearchTerm} />
             <div className="home-content">
                 <aside className="left-sidebar">
                     <Sidebar />
@@ -35,8 +40,8 @@ export default function HomePage() {
                 <main className="feed-section">
                     {loading ? (
                         <p style={{ color: 'white', textAlign: 'center', marginTop: '20px' }}>게시글을 불러오는 중입니다...</p>
-                    ) : posts.length > 0 ? (
-                        posts.map((post) => (
+                    ) : filteredPosts.length > 0 ? (
+                        filteredPosts.map((post) => (
                             <PostCard
                                 key={post.post_id}
                                 author={`User ${post.author_id}`}
@@ -46,7 +51,9 @@ export default function HomePage() {
                             />
                         ))
                     ) : (
-                        <p style={{ color: 'white', textAlign: 'center', marginTop: '20px' }}>게시글이 없습니다.</p>
+                        <p style={{ color: 'white', textAlign: 'center', marginTop: '20px' }}>
+                            {searchTerm ? '검색 결과와 일치하는 게시글이 없습니다.' : '게시글이 없습니다.'}
+                        </p>
                     )}
                 </main>
             </div>
